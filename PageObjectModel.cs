@@ -24,17 +24,17 @@ namespace Cas31SeleniumTests
             this.driver.Manage().Window.Maximize();
         }
 
-        [TearDown]
-        public void TearDown()
-        {
-            this.driver.Close();
-        }
-
-        [Test]
+       [Test]
         public void TestGoogleSearch()
         {
             HomePage naslovna = new HomePage(this.driver);
             naslovna.GoToPage();
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            this.driver.Close();
         }
     }
 }

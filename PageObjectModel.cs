@@ -28,7 +28,21 @@ namespace Cas31SeleniumTests
         public void TestGoogleSearch()
         {
             HomePage naslovna = new HomePage(this.driver);
+            ResultPage results;
             naslovna.GoToPage();
+            results = naslovna.SearchFor("C# Selenium PageObject Model");
+
+            Assert.Greater(results.NumberOfResults, 0);
+
+        }
+
+        [Test]
+        public void PrivacyLinkCheck()
+        {
+            HomePage naslovna = new HomePage(this.driver);
+            naslovna.GoToPage();
+            naslovna.ClickOnPrivacy();
+            System.Threading.Thread.Sleep(5000);
         }
 
         [TearDown]

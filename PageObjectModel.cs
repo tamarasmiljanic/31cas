@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Cas31SeleniumTests.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using EC = SeleniumExtras.WaitHelpers.ExpectedConditions;
 
@@ -20,7 +20,7 @@ namespace Cas31SeleniumTests
         [SetUp]
         public void SetUp()
         {
-            this.driver = new ChromeDriver();
+            this.driver = new FirefoxDriver();
             this.driver.Manage().Window.Maximize();
         }
 
